@@ -1,0 +1,47 @@
+extends _form-section
+
+block variables
+    - var header = 'Datos personales'
+    - var subheader = 'Escribe tus datos personales'
+
+block campos
+    .col-md-4
+        .form-group
+            label(for="nombre") Nombre (s)
+            .fiat-element
+                input#nombre.form-control(name="nombre", required="required", placeholder="Alonso Alejandro")
+    .col-md-4
+        .form-group
+            label(for="apellido-paterno") Apellido paterno
+            .fiat-element
+                input#apellido-paterno.form-control(name="apellido_paterno", required="required", placeholder="Zúñiga")
+    .col-md-4
+        .form-group
+            label(for="apellido-materno") Apellido materno
+            .fiat-element
+                input#apellido-materno.form-control(name="apellido_materno", required="required", placeholder="Beltrán")
+    .col-md-6
+        .form-group
+            label(for="correo-electronico") Correo electrónico
+            .fiat-element
+                input#correo-electronico.form-control(name="correo_electronico", type="email", required="required", placeholder="contacto@aazbeltran.dev")
+    .col-md-6
+        .form-group
+            label(for="telefono") Teléfono
+            .fiat-element
+                input#telefono.form-control(name="telefono", type="tel", required="required", placeholder="(844) 444 4444")
+    .col-md-12
+        .form-group
+            label(for="metodo_contacto") Deseo ser contactado por
+            br
+            #metodo_contacto.fiat-btn.btn-group.btn-group-toggle(data-toggle="buttons")
+                label.btn
+                    i.fa.fa-phone
+                    | &nbsp;&nbsp;&nbsp;Teléfono
+                    input(name="metodo_contacto", type="radio")
+                label.btn
+                    i.fa.fa-envelope
+                    | &nbsp;&nbsp;&nbsp;Email
+                    input(name="metodo_contacto", type="radio")
+                label.btn.active Ambos
+                    input(name="metodo_contacto", type="radio", checked="checked")

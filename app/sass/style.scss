@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// Import Google font
+@import url("//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i");
+@import url("//db.onlinewebfonts.com/c/8cd35a0393876cc0c0aea0f7cdb4a7ab?family=Gill+Sans+Display+MT+Pro");
+
+@import 'variables';
+@import "mixins";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "index";

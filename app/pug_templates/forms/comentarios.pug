@@ -1,0 +1,32 @@
+extends _form-section
+
+block variables
+    - var header = 'Comentarios'
+    - var subheader = 'Nos importan tus comentarios'
+
+block campos
+    .col-md-12
+        .form-group
+            label(for="comentarios") ¿Dudas? ¿Comentarios?
+            .fiat-element
+                textarea#comentarios.form-control(name="comentarios", rows="6", required="required", placeholder="Escríbenos")
+            br
+            #tipo_pago.fiat-btn.btn-group.btn-group-toggle(data-toggle="buttons")
+                label.btn Contado
+                    input(name="tipo_pago", type="radio")
+                label.btn.active Crédito
+                    input(name="tipo_pago", type="radio", checked="checked")
+    .col-md-6
+        .form-group
+            .custom-control.custom-checkbox.mb-3.checkbox-confirm
+                input#aviso_privacidad.custom-control-input(type="checkbox", name="aviso_privacidad", checked="true")
+                label.custom-control-label(for="aviso_privacidad") He leido y acepto el&nbsp;
+                    u
+                        a(href="#") aviso de privacidad
+        .form-group
+            .custom-control.custom-checkbox.mb-3.checkbox-confirm
+                input#cancelacion_promociones.custom-control-input(type="checkbox", name="cancelacion_promociones")
+                label.custom-control-label(for="cancelacion_promociones") No deseo recibir promociones
+    .col-md-6
+        .fiat-btn.submit-button
+            input.btn(type="submit", value="Enviar")

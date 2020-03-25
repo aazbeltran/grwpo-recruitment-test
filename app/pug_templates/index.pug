@@ -1,0 +1,82 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale = 1, maximum-scale = 1, user-scalable=no")
+        link(href="/humans.txt", rel="author", type="text/plain")
+        title Cotizador FIAT
+        // build:css(.) styles/vendor.css
+        link(href="node_modules/@fortawesome/fontawesome-free/css/all.min.css", rel="stylesheet")
+        // endbuild
+        // build:css({.tmp,app}) styles/style.css
+        link(href="styles/style.css", rel="stylesheet")
+        // endbuild
+    body
+        nav.navbar.navbar-expand-md.fixed-top
+            .container.w-100.justify-content-end
+                .navbar-header
+                    a.navbar-brand.visible-xs(href="#")
+                        //- FIAT
+                        img.brand-logo(src="images/logo_250.png")
+                button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbar-menu", aria-expanded=false,
+                    aria-controls="navbar-menu", aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                #navbar-menu.navbar-collapse.collapse
+                    ul.navbar-nav.navbar-expand-md.nav-fill.w-75.mx-auto
+                        li.nav-item
+                            a.nav-link(href='#') Modelos
+                        li.nav-item
+                            a.nav-link(href='#') Prueba de Manejo
+                        li.nav-item.active
+                            a.nav-link(href='#') Cotizar
+                        li.nav-item
+                            a.nav-link(href="#") Promociones
+                        li.nav-item
+                            a.nav-link(href="#") Distribuidores
+        .container.m-body
+            .row
+                .col-md-12.encabezado
+                    span.encabezado-titulo Cotizador
+                    span.encabezado-subtitulo Citadino, Aventurero, Deportivo
+                    span.encabezado-banner Elige el tuyo
+            .row.cotizador
+                .col-md-12.image-container
+                    img.automovil-image(src="images/fiat-uno.png")
+                .col-md-12.formulario
+                    form#cotizacion-form(method="post", action="", role="form")
+                        .controls
+                            .row
+                                .col-md-6
+                                    .form-group
+                                        label(for="modelo") Modelo
+                                        .fiat-element.select
+                                            select#modelo.form-control(name="modelo", required="required")
+                                                option Selecciona
+                                .col-md-6
+                                    .form-group
+                                        label(for="version") Versión
+                                        .fiat-element.select
+                                            select#version.form-control(name="version", required="required")
+                                                option Selecciona
+                                .col-md-6
+                                    .form-group
+                                        label(for="estado") Estado
+                                        .fiat-element.select
+                                            select#estado.form-control(name="estado", required="required")
+                                                option Selecciona
+                                .col-md-6
+                                    .form-group
+                                        label(for="distribuidor") Distribuidor
+                                        .fiat-element.select
+                                            select#distribuidor.form-control(name="distribuidor", required="required")
+                                                option Selecciona
+                            include forms/datos-personales
+                            include forms/metodo-pago
+                            include forms/comentarios
+
+
+
+    // build:js(.) scripts/vendor.js
+    script(src="node_modules/jquery/dist/jquery.min.js")
+    script(src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")
+    // endbuild

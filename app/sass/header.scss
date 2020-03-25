@@ -1,0 +1,46 @@
+nav.navbar {
+  padding: .7rem 1rem !important;
+  background: $color-white;
+  font-family: "Gill Sans Display MT Pro";
+  font-size: .7rem;
+
+  .navbar-header .navbar-brand {
+    position: absolute;
+    padding: 0 !important;
+    margin: 0 !important;
+    top: .50em;
+
+    @include media-breakpoint-down(sm) {
+      left: 1.25rem;
+    }
+
+    img {
+      position: relative;
+      width: 65px;
+
+      @include media-breakpoint-down(sm) {
+        width: 75px;
+      }
+      @include vendor-prefix('filter', 'drop-shadow(0px 0px 20px rgba(0,0,0,0.75))');
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(#{red($navbar-toggler-color)},#{green($navbar-toggler-color)},#{blue($navbar-toggler-color)})' stroke-width='4' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  #navbar-menu {
+
+    .navbar-nav li {
+      a {
+        color: $body-color !important;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      &.active a {
+        color: $navbar-toggler-color !important;
+      }
+    }
+  }
+}

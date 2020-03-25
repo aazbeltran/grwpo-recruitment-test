@@ -1,0 +1,21 @@
+{
+	"team": [
+		{
+			"Full Stack Developer": "Alonso Alejandro Zúñiga Beltrán",
+			"Site": "https://aazbeltran.dev",
+			"Twitter": "@aazbeltran",
+			"Github": "@aazbeltran",
+			"Location": "Saltillo, Coahuila, MX"
+		}
+	],
+	"site": [
+		{
+			"Version": "<%= pkg.version %>",
+			"Site Url": "<%= pkg.homepage %>",
+			"Language": "Spanish",
+			"Doctype": "HTML5",
+			"Technology": "Grunt, SASS, Bootstrap, Pug",
+			"IDE": "WebStorm"
+		}
+	]
+}

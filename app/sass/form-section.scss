@@ -1,0 +1,92 @@
+.cotizador .form-section {
+  margin-bottom: 20px;
+
+  .header {
+    text-align: center;
+
+    span {
+      text-transform: none;
+      font-family: "Playfair Display";
+      font-style: italic;
+      margin-top: 40px;
+      font-weight: bold;
+      font-size: 2.8rem;
+      color: $color-red;
+      overflow: hidden;
+
+      &:before, &:after {
+        background-color: $color-red;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 4.5rem;
+        &:before, &:after {
+          width: 15%;
+        }
+        &:before {
+          right: 0.5em;
+          margin-left: -50%;
+        }
+        &:after {
+          left: 0.5em;
+          margin-right: -50%;
+
+        }
+      }
+
+      @include media-breakpoint-only(md) {
+        font-size: 3rem;
+        &:before, &:after {
+          width: 10%;
+        }
+        &:before {
+          right: 0.5em;
+          margin-left: -50%;
+        }
+        &:after {
+          left: 0.5em;
+          margin-right: -50%;
+        }
+      }
+    }
+  }
+
+  .subheader {
+    text-align: center;
+    margin-bottom: 20px;
+
+    span {
+      font-family: "Lato";
+      letter-spacing: 3px;
+      word-spacing: 1.5px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.checkbox-confirm {
+  text-transform: none;
+
+  a {
+    color: $body-color;
+    font-weight: bold;
+  }
+}
+
+.submit-button {
+  text-transform: uppercase;
+  text-align: end;
+
+  input.btn {
+    width: 50%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}

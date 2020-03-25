@@ -1,0 +1,55 @@
+{
+  "name": "@aazbeltran/grwpo-recruitment-test",
+  "version": "1.0.0",
+  "description": "recruitment program test",
+  "keywords": [
+    "grwpo",
+    "test",
+    "aazbeltran",
+    "recruitment",
+    "program"
+  ],
+  "homepage": "https://github.com/aazbeltran/grwpo-recruitment-test#readme",
+  "bugs": {
+    "url": "https://github.com/aazbeltran/grwpo-recruitment-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aazbeltran/grwpo-recruitment-test.git"
+  },
+  "license": "ISC",
+  "author": "Alonso Alejandro Zúñiga Beltrán",
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt live",
+    "build": "grunt build",
+    "server": "grunt server"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-concurrent": "^3.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-pug": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-filerev": "^2.3.1",
+    "grunt-humans-txt": "^0.2.1",
+    "grunt-usemin": "^3.1.1",
+    "jshint-stylish": "^2.2.1",
+    "load-grunt-tasks": "^5.1.0",
+    "serve-static": "^1.14.1",
+    "time-grunt": "^2.0.0"
+  }
+}

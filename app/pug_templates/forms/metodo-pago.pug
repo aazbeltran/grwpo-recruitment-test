@@ -1,0 +1,27 @@
+extends _form-section
+
+block variables
+    - var header = 'Forma de pago'
+    - var subheader = 'Personaliza tu cotización'
+
+block campos
+    .col-md-12
+        .form-group
+            label(for="tipo_pago") Elige tu tipo de pago
+            br
+            #tipo_pago.fiat-btn.btn-group.btn-group-toggle(data-toggle="buttons")
+                label.btn Contado
+                    input(name="tipo_pago", type="radio")
+                label.btn.active Crédito
+                    input(name="tipo_pago", type="radio", checked="checked")
+    .col-md-6
+        .form-group
+            label(for="cantidad-enganche") Cantidad de enganche
+            .fiat-element
+                input#cantidad-enganche.form-control(name="cantidad_enganche", required="required", placeholder="$80,000.00")
+    .col-md-6
+        .form-group
+            label(for="plazo") Plazo
+            .fiat-element.select
+                select#plazo.form-control(name="plazo", required="required")
+                    option 72 meses
